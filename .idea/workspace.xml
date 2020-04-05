@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c7e3a93-b032-439c-aeba-88fc21c8b3f1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/searchModel.py" beforeDir="false" afterPath="$PROJECT_DIR$/searchModel.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/searchModelWeb.py" beforeDir="false" afterPath="$PROJECT_DIR$/searchModelWeb.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trial.py" beforeDir="false" afterPath="$PROJECT_DIR$/trial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trial_js.js" beforeDir="false" afterPath="$PROJECT_DIR$/trial_js.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/output.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/output.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp.py" beforeDir="false" afterPath="$PROJECT_DIR$/webapp.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,7 +66,26 @@
     <configuration name="output.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/MessageSearch/templates/output.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="trial_js.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/trial_js.js" working-dir="$PROJECT_DIR$">
+    <configuration name="searchModel" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="MessageSearch" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/searchModel.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <configuration name="trial" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -117,10 +135,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.webapp" />
+        <item itemvalue="Python.searchModel" />
         <item itemvalue="Python.trial" />
         <item itemvalue="JavaScript Debug.output.html" />
         <item itemvalue="JavaScript Debug.indexagain.html" />
-        <item itemvalue="Node.js.trial_js.js" />
       </list>
     </recent_temporary>
   </component>
@@ -134,7 +152,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1585699321942</updated>
-      <workItem from="1585699325186" duration="54820000" />
+      <workItem from="1585699325186" duration="59059000" />
     </task>
     <servers />
   </component>
@@ -157,8 +175,8 @@
     <SUITE FILE_PATH="coverage/MessageSearch$elastictrial.coverage" NAME="elastictrial Coverage Results" MODIFIED="1585704970823" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MessageSearch$trial2.coverage" NAME="trial2 Coverage Results" MODIFIED="1585702494227" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MessageSearch$trial.coverage" NAME="trial Coverage Results" MODIFIED="1586075380401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/MessageSearch$webapp.coverage" NAME="webapp Coverage Results" MODIFIED="1586075568784" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/MessageSearch$searchModel.coverage" NAME="searchModel Coverage Results" MODIFIED="1585990722279" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MessageSearch$webapp.coverage" NAME="webapp Coverage Results" MODIFIED="1586084466810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MessageSearch$searchModel.coverage" NAME="searchModel Coverage Results" MODIFIED="1586081498349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MessageSearch$searchModelWeb.coverage" NAME="searchModelWeb Coverage Results" MODIFIED="1585990611672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MessageSearch$FlaskList.coverage" NAME="FlaskList Coverage Results" MODIFIED="1585986744653" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MessageSearch$searchModel2.coverage" NAME="searchModel2 Coverage Results" MODIFIED="1585731532073" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

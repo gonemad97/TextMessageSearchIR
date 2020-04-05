@@ -5,7 +5,7 @@ es = Elasticsearch()
 global res
 def create_index():
     res = None
-    pickle_in = open("movie_list_paras2.pickle","rb")
+    pickle_in = open("movie_list_paras.pickle","rb")
     movies = pickle.load(pickle_in)
 
     count = 1

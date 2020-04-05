@@ -6,7 +6,7 @@ class QuerySearch(object):
     global res
     def create_index(self):
         res = None
-        pickle_in = open("movie_list_paras2.pickle","rb")
+        pickle_in = open("movie_list_paras.pickle","rb")
         movies = pickle.load(pickle_in)
 
         count = 1
@@ -68,5 +68,5 @@ class QuerySearch(object):
 
 
 x = QuerySearch()
-print(x.search_query())
-#print(x.delete_index())
+#print(x.search_query())
+print(x.delete_index())
