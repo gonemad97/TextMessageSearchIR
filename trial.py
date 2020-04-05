@@ -39,5 +39,37 @@ for key,val in results.items():
     results[key] = temp
 # print(results)
 
-user_query = "hello there"
+user_query = "hello dude"
 words = user_query.split()
+abbreviations = {
+    "ily":"i love you",
+    "ofc":"of course",
+    "ikr":"i know right",
+    "nvm":"never mind",
+    "lmk":"let me know",
+    "brb":"be right back",
+    "ur":"you're",
+    "u":"you",
+    "thr":"there",
+    "r":"are",
+    "urs":"yours",
+    "tht":"that",
+    "k":"okay",
+    "thnks":"thanks",
+    "thanx":"thanks",
+    "thnx":"thanks",
+    "pic":"picture",
+    "pics":"pictures",
+    "gn":"good night",
+    "gm":"good morning"
+
+}
+
+# for i in range(len(words)):
+#     if words[i] in abbreviations:
+#
+
+
+words = [abbreviations.get(n, n) for n in words]
+q = ' '.join(words)
+print(q)

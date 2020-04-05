@@ -13,4 +13,4 @@ var str = "Hello world, welcome to the universe.";
 var n = str.includes("world");
 if(n){
     console.log("helloooo") }
-    document.write(n.fontcolor( "blue" ));}
+    document.write(n.fontcolor( "blue" ));

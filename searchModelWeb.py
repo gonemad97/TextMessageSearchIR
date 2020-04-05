@@ -24,7 +24,34 @@ def create_index():
     return res
 
 def abbreviations(user_query):
+
     words = user_query.split()
+    abbreviations = {
+    "ily":"i love you",
+    "ofc":"of course",
+    "ikr":"i know right",
+    "nvm":"never mind",
+    "lmk":"let me know",
+    "brb":"be right back",
+    "ur":"you're",
+    "u":"you",
+    "thr":"there",
+    "r":"are",
+    "urs":"yours",
+    "tht":"that",
+    "k":"okay",
+    "thnks":"thanks",
+    "thanx":"thanks",
+    "thnx":"thanks",
+    "pic":"picture",
+    "pics":"pictures",
+    "gn":"good night",
+    "gm":"good morning"}
+
+    words = [abbreviations.get(n, n) for n in words]
+    q = ' '.join(words)
+
+    return q
 
 
 def search_query(user_query):
