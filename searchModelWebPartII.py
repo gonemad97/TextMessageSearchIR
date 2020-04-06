@@ -99,7 +99,37 @@ def retieve_top_convos(user_query):
     #for updating results if a single worded query with less than 10 results
     if len(user_query.split()) == 1 and len(result) < 10:
         count = 10 - len(result)
+        pickle_in = open("synonyms.pickle","rb")
+        synonyms = pickle.load(pickle_in)
+        if user_query in synonyms:
+            new_user_query = synonyms[user_query]
 
+            scores,convo = search_query(new_user_query)
+            heap = [(-key, value) for key,value in scores.items()]
+            largest = heapq.nsmallest(count, heap)
+            largest = [key for value, key in largest]
+
+            #uppercase to highlight new synonyms
+            for i in largest:
+                for j in convo[i]:
+                    for k in j.split():
+                        k = k.replace("<mark>","")
+                        k = k.replace("</mark>","")
+                        if k == synonyms[user_query]:
+                            x = k.upper()
+                            j = j.replace(k,x)
+                            convo[i] = j
+
+                result[i] = [convo[i]]
+
+            #print(result)
+            return result
+        else:
+            #print(result)
+            return result
+    else:
+        #print(result)
+        return result
 
 
 def delete_index():
@@ -109,3 +139,4 @@ def delete_index():
 
 # delete_index()
 # # search_query()
+retieve_top_convos("awful")

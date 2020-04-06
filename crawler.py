@@ -20,7 +20,6 @@ def crawl_movie_links(self):
 
     return links
 
-
 def crawl_dialogues(self):
     movie_list = []
     links = self.crawl_movie_links()

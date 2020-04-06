@@ -22,5 +22,14 @@ ptag = div_tag.findAll("p")
 # for i in list(ptag):
 #     if i.strong:
 #         print(i.strong.text)
+synonyms = {}
 for i in list(ptag):
-    print(i.text)
+    x = i.text.replace(" —","")
+    val = x[x.find(" "):][1:].split(',')[0]
+    key = x[:x.find(" ")].lower()
+    if key == "ask–":
+        key = key.replace('ask–',"ask")
+    if key:
+        synonyms[key] = val
+
+print(synonyms)

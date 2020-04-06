@@ -89,9 +89,33 @@ class Crawler(object):
     #
     #     return None
 
+    def find_synonyms(self):
+        main_url = "https://justenglish.me/2014/04/18/synonyms-for-the-96-most-commonly-used-words-in-english/"
+        try:
+            requestSource = requests.get(main_url) # or "html.parser"
+        except:
+            print ("Failed to establish connection. Check your internet.")
+        beautifiedSource = bs(requestSource.content, "html.parser")
+
+        div_tag = beautifiedSource.find("div", {"class": "entry clearfix"})
+        ptag = div_tag.findAll("p")
+
+        synonyms = {}
+        for i in list(ptag):
+            x = i.text.replace(" —","")
+            val = x[x.find(" "):][1:].split(',')[0]
+            key = x[:x.find(" ")].lower()
+            if key == "ask–":
+                key = key.replace('ask–',"ask")
+            if key:
+                synonyms[key] = val
+
+        pickle_out = open("synonyms.pickle","wb")
+        pickle.dump(synonyms, pickle_out)
+        pickle_out.close()
+
     def crawl_dialogues(self): #multiple dictionaries with one sentence and movie title EACH
         movie_list = []
-        count = 1
         links = self.crawl_movie_links()
         print(len(links))
         # text_file = open("OutputMovies1.txt", "a")
@@ -142,5 +166,9 @@ class Crawler(object):
 
         return None
 
+
+
+
 x = Crawler()
-print(x.crawl_dialogues())
+# print(x.crawl_dialogues())
+print(x.find_synonyms())

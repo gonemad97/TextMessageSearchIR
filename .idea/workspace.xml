@@ -4,9 +4,10 @@
     <list default="true" id="1c7e3a93-b032-439c-aeba-88fc21c8b3f1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crawler.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_list_paras2.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/movie_list_paras2.pickle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/searchModelWeb.py" beforeDir="false" afterPath="$PROJECT_DIR$/searchModelWeb.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crawler_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawler_main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/searchModelWebPartII.py" beforeDir="false" afterPath="$PROJECT_DIR$/searchModelWebPartII.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/trial2.py" beforeDir="false" afterPath="$PROJECT_DIR$/trial2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp.py" beforeDir="false" afterPath="$PROJECT_DIR$/webapp.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +60,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.trial2">
+  <component name="RunManager" selected="Python.webapp">
     <configuration name="crawler_main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="MessageSearch" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -104,7 +105,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="trial" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="searchModelWebPartII" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="MessageSearch" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -117,7 +118,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/trial.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/searchModelWebPartII.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -172,11 +173,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.trial2" />
         <item itemvalue="Python.webapp" />
+        <item itemvalue="Python.searchModelWebPartII" />
         <item itemvalue="Python.crawler_main" />
+        <item itemvalue="Python.trial2" />
         <item itemvalue="Python.searchModel" />
-        <item itemvalue="Python.trial" />
       </list>
     </recent_temporary>
   </component>
@@ -190,7 +191,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1585699321942</updated>
-      <workItem from="1585699325186" duration="67541000" />
+      <workItem from="1585699325186" duration="76478000" />
     </task>
     <servers />
   </component>
@@ -208,13 +209,25 @@
       </map>
     </option>
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/searchModelWebPartII.py</url>
+          <line>141</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/MessageSearch$crawler.coverage" NAME="crawler Coverage Results" MODIFIED="1585701816485" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MessageSearch$elastictrial.coverage" NAME="elastictrial Coverage Results" MODIFIED="1585704970823" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MessageSearch$trial.coverage" NAME="trial Coverage Results" MODIFIED="1586075380401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/MessageSearch$trial2.coverage" NAME="trial2 Coverage Results" MODIFIED="1586165214362" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/MessageSearch$webapp.coverage" NAME="webapp Coverage Results" MODIFIED="1586123544151" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/MessageSearch$crawler_main.coverage" NAME="crawler_main Coverage Results" MODIFIED="1586123247104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MessageSearch$trial2.coverage" NAME="trial2 Coverage Results" MODIFIED="1586168115753" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MessageSearch$searchModelWebPartII.coverage" NAME="searchModelWebPartII Coverage Results" MODIFIED="1586204833299" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MessageSearch$webapp.coverage" NAME="webapp Coverage Results" MODIFIED="1586205604050" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MessageSearch$crawler_main.coverage" NAME="crawler_main Coverage Results" MODIFIED="1586168143903" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MessageSearch$searchModel.coverage" NAME="searchModel Coverage Results" MODIFIED="1586081498349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MessageSearch$searchModelWeb.coverage" NAME="searchModelWeb Coverage Results" MODIFIED="1585990611672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MessageSearch$FlaskList.coverage" NAME="FlaskList Coverage Results" MODIFIED="1585986744653" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
