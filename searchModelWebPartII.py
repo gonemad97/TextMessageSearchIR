@@ -27,27 +27,27 @@ def abbreviations(user_query):
 
     words = user_query.split()
     abbreviations = {
-    "ily":"i love you",
-    "ofc":"of course",
-    "ikr":"i know right",
-    "nvm":"never mind",
-    "lmk":"let me know",
-    "brb":"be right back",
-    "lol":"laughing out loud",
-    "ur":"you're",
-    "u":"you",
-    "thr":"there",
-    "r":"are",
-    "urs":"yours",
-    "tht":"that",
-    "k":"okay",
-    "thnks":"thanks",
-    "thanx":"thanks",
-    "thnx":"thanks",
-    "pic":"picture",
-    "pics":"pictures",
-    "gn":"good night",
-    "gm":"good morning"}
+        "ily":"i love you",
+        "ofc":"of course",
+        "ikr":"i know right",
+        "nvm":"never mind",
+        "lmk":"let me know",
+        "brb":"be right back",
+        "lol":"laughing out loud",
+        "ur":"you're",
+        "u":"you",
+        "thr":"there",
+        "r":"are",
+        "urs":"yours",
+        "tht":"that",
+        "k":"okay",
+        "thnks":"thanks",
+        "thanx":"thanks",
+        "thnx":"thanks",
+        "pic":"picture",
+        "pics":"pictures",
+        "gn":"good night",
+        "gm":"good morning"}
 
     words = [abbreviations.get(n, n) for n in words]
     q = ' '.join(words)
@@ -60,9 +60,9 @@ def search_query(user_query):
     res = es.search(index="movie_dialogue",
                     size = 50, body={"query":{
             "match_phrase":{
-            "script":user_query
-        }
-            },
+                "script":user_query
+            }
+        },
             "highlight":{
                 "fragment_size":100,
                 "fields":{
@@ -94,7 +94,13 @@ def retieve_top_convos(user_query):
         result[i] = convo[i]
 
     #print(result)
-    return result
+    # return result
+
+    #for updating results if a single worded query with less than 10 results
+    if len(user_query.split()) == 1 and len(result) < 10:
+        count = 10 - len(result)
+
+
 
 def delete_index():
     es.indices.delete(index='movie_dialogue')

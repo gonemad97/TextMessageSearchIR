@@ -54,3 +54,5 @@ def crawl_dialogues(self):
     pickle_out.close()
 
     return None
+
+def crawl_synonyms():
