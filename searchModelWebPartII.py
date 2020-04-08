@@ -64,6 +64,7 @@ def search_query(user_query):
             }
         },
             "highlight":{
+                "type":"unified",
                 "fragment_size":100,
                 "fields":{
                     "script":{ "pre_tags" : ["<mark>"], "post_tags" : ["</mark>"] }
@@ -84,6 +85,53 @@ def search_query(user_query):
 
     return scores,convo
 
+# def retieve_top_convos(user_query):
+#     scores,convo = search_query(user_query)
+#     heap = [(-key, value) for key,value in scores.items()]
+#     largest = heapq.nsmallest(10, heap)
+#     largest = [key for value, key in largest]
+#     result = {}
+#     for i in largest:
+#         result[i] = convo[i]
+#
+#     #print(result)
+#     # return result
+#
+#     #for updating results if a single worded query with less than 10 results
+#     if len(user_query.split()) == 1 and len(result) < 10:
+#         count = 10 - len(result)
+#         pickle_in = open("synonyms.pickle","rb")
+#         synonyms = pickle.load(pickle_in)
+#         if user_query in synonyms:
+#             new_user_query = synonyms[user_query]
+#
+#             scores,convo = search_query(new_user_query)
+#             heap = [(-key, value) for key,value in scores.items()]
+#             largest = heapq.nsmallest(count, heap)
+#             largest = [key for value, key in largest]
+#
+#             #uppercase to highlight new synonyms
+#             for i in largest:
+#                 for j in convo[i]:
+#                     for k in j.split():
+#                         k = k.replace("<mark>","")
+#                         k = k.replace("</mark>","")
+#                         if k == synonyms[user_query]:
+#                             x = k.upper()
+#                             j = j.replace(k,x)
+#                             convo[i] = j
+#
+#                 result[i] = [convo[i]]
+#
+#             #print(result)
+#             return result
+#         else:
+#             #print(result)
+#             return result
+#     else:
+#         #print(result)
+#         return result
+
 def retieve_top_convos(user_query):
     scores,convo = search_query(user_query)
     heap = [(-key, value) for key,value in scores.items()]
@@ -91,6 +139,7 @@ def retieve_top_convos(user_query):
     largest = [key for value, key in largest]
     result = {}
     for i in largest:
+        convo[i] = [" ".join(convo[i])]
         result[i] = convo[i]
 
     #print(result)
@@ -109,20 +158,21 @@ def retieve_top_convos(user_query):
             largest = heapq.nsmallest(count, heap)
             largest = [key for value, key in largest]
 
+
             #uppercase to highlight new synonyms
             for i in largest:
                 for j in convo[i]:
                     for k in j.split():
                         k = k.replace("<mark>","")
                         k = k.replace("</mark>","")
-                        if k == synonyms[user_query]:
+                        if k.lower() == synonyms[user_query]:
                             x = k.upper()
                             j = j.replace(k,x)
-                            convo[i] = j
+                            convo[i] = [j]
 
-                result[i] = [convo[i]]
+                result[i] = convo[i]
 
-            #print(result)
+            print(result)
             return result
         else:
             #print(result)
@@ -134,9 +184,9 @@ def retieve_top_convos(user_query):
 
 def delete_index():
     es.indices.delete(index='movie_dialogue')
-    print("Existing index, 'movie_dialogue' has been deleted. Indexing again...")
-    search_query()
+    print("Existing index, 'movie_dialogue' has been deleted. Index again.")
+    # search_query()
 
 # delete_index()
 # # search_query()
-retieve_top_convos("awful")
+# retieve_top_convos("awful")

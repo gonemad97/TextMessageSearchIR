@@ -9,7 +9,14 @@
           media="screen,projection"/>
 </head>
 <style>
-    body {background-color: darkseagreen;}
+    body {
+        background-image : url('/static/img/gradient_purple.png');
+        height:100%;
+        background-position: center;
+        background-repeat: initial;
+        background-size: cover;
+    }
+
     h4 {color: ghostwhite;font-family: 'Consolas', 'Monaco', 'Bitstream Vera Sans Mono', monospace}
     p {text-align: justify;
         top:  50%;
@@ -39,11 +46,16 @@
 
 
 </style>
-<body>
+<body background="/Users/madhuripalanivelu/Documents/IDEs_Code_and_Workspaces/eclipse-workspace/MessageSearch/images/gradient_green.png">
 <script>
     function goBack() {
         window.history.go(-1);
     }
+    // function noResult(movie) {
+    //     if(movie.length == 0){
+    //
+    //     }
+    // }
     function highlight() {
         // const query = document.getElementById('res');
         // // const word = (query.getAttribute('data-q'));
@@ -64,7 +76,6 @@
                 let result = str.replace(new RegExp(word, "gi"),
                                          (match) => `<mark>${match}</mark>`);
                 query[i].innerHTML = result;
-                console.log("entered inner")
             }
         }
 

@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup as bs
 import re,pickle
 
+
 class Crawler(object):
     
     def crawl_movie_links(self):
@@ -10,7 +11,7 @@ class Crawler(object):
         print("Fetching all movie links...")
         for letter in alphabet:
 
-            main_url = "https://www.scripts.com/scripts/" + letter
+            main_url = "https://www.scripts.com/scripts/" + letter + "/99999"
             try:
                 requestSource = requests.get(main_url) # or "html.parser"
             except:
@@ -148,7 +149,8 @@ class Crawler(object):
                 #         continue
                 movie = {"title":title,"script":''}
                 for j in list(block):
-                    x = j.text
+                    x = re.sub("[^\w\d'\s]+",'',j.text).lower()
+                    # x = j.text
                     if x != '':
                         movie["script"] += " " +x.strip(' ')
                     else:
@@ -160,7 +162,7 @@ class Crawler(object):
             else:
                 continue
 
-        pickle_out = open("movie_list_paras2.pickle","wb")
+        pickle_out = open("movie_list_paras_full.pickle","wb")
         pickle.dump(movie_list, pickle_out)
         pickle_out.close()
 
@@ -170,5 +172,5 @@ class Crawler(object):
 
 
 x = Crawler()
-# print(x.crawl_dialogues())
-print(x.find_synonyms())
+print(x.crawl_dialogues())
+# print(x.find_synonyms())
