@@ -1,11 +1,19 @@
 from elasticsearch import Elasticsearch
 import pickle,heapq
 
+"""
+Methods mentioned below are used for the Flask application.
+"""
 es = Elasticsearch()
 global res
+
+"""
+Uses the pickle object containing the dictionary of movie titles and their scripts, to insert into
+a new Elasticsearch index, one record at a time. The resulting index is returned.
+"""
 def create_index():
     res = None
-    pickle_in = open("movie_list_paras.pickle","rb")
+    pickle_in = open("movie_list_paras_full.pickle","rb")
     movies = pickle.load(pickle_in)
 
     count = 1
@@ -23,6 +31,11 @@ def create_index():
 
     return res
 
+"""
+Holds a list of text abbreviations and their full forms. When a user enters a search query with 
+these abbreviations, they will be converted to their full forms, for the ease of getting better
+search results. The newly formed search query is returned.
+"""
 def abbreviations(user_query):
 
     words = user_query.split()
@@ -55,6 +68,12 @@ def abbreviations(user_query):
     return q
 
 
+"""
+The user's search query is processed and a match phrase process is conducted using the ES search API.
+Highlighting, also a part of the ES API, is performed as well on the words directly matching the
+search query. A dictionary with the movie titles and their scores as well as a dictionary with the
+resulting movie titles and their highlighted scripts are returned.
+"""
 def search_query(user_query):
     create_index()
     res = es.search(index="movie_dialogue",
@@ -132,6 +151,14 @@ def search_query(user_query):
 #         #print(result)
 #         return result
 
+
+"""
+Using the score and conversation(movie script) dictionaries, a heap is used to create a descendingly
+ordered list of movies and their scripts based on the Lucene Practical Scoring Function.
+If the user's search query is a single word, and if it fits a word in the list of synonyms in the 
+pickle file, this algorithm will use the reults from the query's synonym word, if in case the total
+results from the original query word, do not make it to 10.
+"""
 def retieve_top_convos(user_query):
     scores,convo = search_query(user_query)
     heap = [(-key, value) for key,value in scores.items()]
@@ -172,7 +199,7 @@ def retieve_top_convos(user_query):
 
                 result[i] = convo[i]
 
-            print(result)
+            #print(result)
             return result
         else:
             #print(result)
@@ -181,12 +208,15 @@ def retieve_top_convos(user_query):
         #print(result)
         return result
 
-
+"""
+Solely for testing and presentation purposes and not for the user's use. Deletes the index.
+"""
 def delete_index():
     es.indices.delete(index='movie_dialogue')
     print("Existing index, 'movie_dialogue' has been deleted. Index again.")
     # search_query()
 
 # delete_index()
+create_index()
 # # search_query()
 # retieve_top_convos("awful")

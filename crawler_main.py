@@ -3,8 +3,17 @@ from bs4 import BeautifulSoup as bs
 import re,pickle
 
 
+'''
+This class crawls required movie script information from a website and stores it into a pickle file 
+to be used later.
+'''
 class Crawler(object):
-    
+
+    """
+    Crawls a website that holds movie scripts. It curls through every link alphabetically
+    in the website and it crawls each and every movie under every alphabet. A list of all these links
+    is returned here.
+    """
     def crawl_movie_links(self):
         links = []
         alphabet = ['0','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
@@ -28,68 +37,10 @@ class Crawler(object):
         return links
 
 
-    # def crawl_dialogue_singledict(self): #all movies into a SINGLE dictionary
-    #     movies = {}
-    #     links = self.crawl_movie_links()
-    #     for link in links:
-    #         print(link)
-    #         requestSource = requests.get(link)
-    #
-    #         if requestSource.status_code == 200:
-    #
-    #             beautifiedSource = bs(requestSource.content, "html.parser")
-    #             block = beautifiedSource.blockquote.findAll("p")
-    #
-    #             h1_tag = beautifiedSource.find("h1", {"id": "disp-script-title"})
-    #             title = h1_tag.a.text
-    #
-    #             movies[title] = []
-    #
-    #             for j in list(block):
-    #                 x = re.sub("[^\w\d'\s]+",'',j.text).lower()
-    #                 print(x)
-    #                 movies[title].append(x.strip(' '))
-    #
-    #         else:
-    #             continue
-    #
-    #     return movies
-
-    # def crawl_dialogues(self): #multiple dictionaries with list of all sentences
-    #     movie_list = []
-    #     links = self.crawl_movie_links()
-    #     # text_file = open("OutputMovies1.txt", "a")
-    #     print("Crawling all links...stay tuned.")
-    #     for link in links:
-    #         movie = {}
-    #         print(link)
-    #         requestSource = requests.get(link)
-    #
-    #         if requestSource.status_code == 200:
-    #
-    #             beautifiedSource = bs(requestSource.content, "html.parser")
-    #             block = beautifiedSource.blockquote.findAll("p")
-    #
-    #             h1_tag = beautifiedSource.find("h1", {"id": "disp-script-title"})
-    #             title = h1_tag.a.text
-    #
-    #             movie[title] = []
-    #
-    #             for j in list(block):
-    #                 x = re.sub("[^\w\d'\s]+",'',j.text).lower()
-    #                 movie[title].append(x.strip(' '))
-    #             # text_file.write(json.dumps(movie,indent=3, sort_keys=True))
-    #             movie_list.append(movie)
-    #
-    #         else:
-    #             continue
-    #
-    #     pickle_out = open("movie_list.pickle","wb")
-    #     pickle.dump(movie_list, pickle_out)
-    #     pickle_out.close()
-    #
-    #     return None
-
+    """
+    Crawls a website containing some English words and their synomyms. A dictionary with the word
+    and its appropriate synonym is returned.
+    """
     def find_synonyms(self):
         main_url = "https://justenglish.me/2014/04/18/synonyms-for-the-96-most-commonly-used-words-in-english/"
         try:
@@ -115,6 +66,13 @@ class Crawler(object):
         pickle.dump(synonyms, pickle_out)
         pickle_out.close()
 
+
+    """
+    Each link that was returned as a total list will be parsed here. A dictionary containing the 
+    movie title and the script of the first scene of each movie is stored. The script is further
+    processed to remove unnecessary punctuation and it converted to lower case to better search 
+    results.
+    """
     def crawl_dialogues(self): #multiple dictionaries with one sentence and movie title EACH
         movie_list = []
         links = self.crawl_movie_links()
@@ -138,15 +96,6 @@ class Crawler(object):
                 except:
                     title = "Unknown"
 
-                # for j in list(block):
-                #     movie = {"title":title}
-                #     x = re.sub("[^\w\d'\s]+",'',j.text).lower()
-                #     if x != '':
-                #         movie["script"] = x.strip(' ')
-                #         movie_list.append(movie)
-                #         print(movie)
-                #     else:
-                #         continue
                 movie = {"title":title,"script":''}
                 for j in list(block):
                     x = re.sub("[^\w\d'\s]+",'',j.text).lower()
