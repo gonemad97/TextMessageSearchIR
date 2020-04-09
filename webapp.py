@@ -18,10 +18,6 @@ def top_k():
         for key,val in top_k_results.items():
             temp = []
             for i in top_k_results[key]:
-                #words = re.findall(r'<mark>(.*?)</mark>', i)
-                # for word in words:
-                #     if word in i:
-                #         i = i.replace(word,word.upper())
                 i = i.replace("<mark>","")
                 i = i.replace("</mark>","")
                 temp.append(i)

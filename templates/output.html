@@ -51,21 +51,9 @@
     function goBack() {
         window.history.go(-1);
     }
-    // function noResult(movie) {
-    //     if(movie.length == 0){
-    //
-    //     }
-    // }
-    function highlight() {
-        // const query = document.getElementById('res');
-        // // const word = (query.getAttribute('data-q'));
-        // const word = "Hello"
-        // const str = (query.getAttribute('data-value'));
-        // str.replace(new RegExp(word, "gi"), (match) => `<mark>${match}</mark>`);
-        /*var elms = document.querySelectorAll("[id='duplicateID']");
 
-        for(var i = 0; i < elms.length; i++)
-            elms[i].style.display='none';*/
+    function highlight() {
+
         const query = document.querySelectorAll("[id='res']");
         for(var i = 0; i < query.length; i++) {
             const str = (query[i].getAttribute('data-value'));
@@ -85,12 +73,6 @@
 <h4>Top 10 Conversations where your search query was found:</h4>
 <br>
 
-<!--<p>{% for key, value in name.items() %}-->
-<!--{{ key }} : {{ value }}-->
-<!--    <br><br>-->
-<!--    {% endfor %}</p>-->
-
-
 <div class="container">
     <div class="row">
         <ol>
@@ -108,39 +90,12 @@
             </li>
             {% endfor %}
         </ol>
-<!--        <button onclick="highlight()">Highlight!</button>-->
 
     </div>
 </div>
 
 <br>
 <br>
-
-<!--<div class="container">-->
-<!--    <div class="row">-->
-<!--        <ol>-->
-
-<!--            {% for movie,script in name.items() %}-->
-<!--            <li>-->
-<!--                <div class="card blue-grey darken-1">-->
-<!--                    <div class="card-content white-text">-->
-<!--                        <span class="card-title">{{movie}}</span>-->
-<!--                        {% for s in script %}-->
-<!--                        {{s}}-->
-<!--                        {% endfor %}-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </li>-->
-<!--            {% endfor %}-->
-<!--        </ol>-->
-<!--    </div>-->
-<!--</div>-->
-
-<!--<br>-->
-<!--<br>-->
-
-
-
 
 <div class = "wrapper">
     <button onclick="goBack()">Search Again</button>
