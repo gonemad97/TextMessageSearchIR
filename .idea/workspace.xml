@@ -4,16 +4,6 @@
     <list default="true" id="1c7e3a93-b032-439c-aeba-88fc21c8b3f1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/searchModelWebPartII.py" beforeDir="false" afterPath="$PROJECT_DIR$/searchModelWebPartII.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/180810-couples-texting-habits-feature.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/gradient_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/gradient_purple.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/indexagain.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/output.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/output.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/photo-1560305527-51dc8ad5a8f8.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/vhoa0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp.py" beforeDir="false" afterPath="$PROJECT_DIR$/webapp.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -163,7 +153,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1585699321942</updated>
-      <workItem from="1585699325186" duration="98944000" />
+      <workItem from="1585699325186" duration="102470000" />
     </task>
     <servers />
   </component>
@@ -187,7 +177,7 @@
     <SUITE FILE_PATH="coverage/MessageSearch$trial.coverage" NAME="trial Coverage Results" MODIFIED="1586075380401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MessageSearch$trial2.coverage" NAME="trial2 Coverage Results" MODIFIED="1586168115753" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MessageSearch$searchModelWebPartII.coverage" NAME="searchModelWebPartII Coverage Results" MODIFIED="1586382565190" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/MessageSearch$webapp.coverage" NAME="webapp Coverage Results" MODIFIED="1586401421263" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MessageSearch$webapp.coverage" NAME="webapp Coverage Results" MODIFIED="1586480295459" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MessageSearch$crawler_main.coverage" NAME="crawler_main Coverage Results" MODIFIED="1586335895984" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MessageSearch$searchModel.coverage" NAME="searchModel Coverage Results" MODIFIED="1586081498349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MessageSearch$searchModelWeb.coverage" NAME="searchModelWeb Coverage Results" MODIFIED="1585990611672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

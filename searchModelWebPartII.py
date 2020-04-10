@@ -93,7 +93,6 @@ def search_query(user_query):
     #print(res)
     scores = {}
     convo = {}
-    # print("Got %d Hits:" % res['hits']['total']['value'])
     for hit in res['hits']['hits']:
         convo[hit["_source"]["title"]] = hit["highlight"]["script"]
         #scores[hit["_source"]["title"]] = hit["_score"]
@@ -113,6 +112,7 @@ pickle file, this algorithm will use the reults from the query's synonym word, i
 results from the original query word, do not make it to 10.
 """
 def retieve_top_convos(user_query):
+    #lucene practical score based heap-top 10 results
     scores,convo = search_query(user_query)
     heap = [(-key, value) for key,value in scores.items()]
     largest = heapq.nsmallest(10, heap)
@@ -160,6 +160,8 @@ def retieve_top_convos(user_query):
     else:
         #print(result)
         return result
+
+
 
 """
 Solely for testing and presentation purposes and not for the user's use. Deletes the index.
