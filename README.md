@@ -1,5 +1,5 @@
 # TextMessageSearchIR
-Information Retrieval Final Project - Search engine to search for specific phrases in text messages
+CS6200 - Information Retrieval Final Project
 
 Refer to the Documentation to understand the project and the concepts used.
 
