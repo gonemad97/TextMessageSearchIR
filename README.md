@@ -12,4 +12,4 @@ Run ```webapp.py``` to start the engine.
 
 
 
-```crawler_main.py``` contains the crawler and ```movies_list_full_paras.pickle``` is the object containing the entire dataset, so the crawler does not need to be ran again.
+```crawler_main.py``` contains the crawler and ```movies_list_full_paras.pickle``` is the object containing the entire dataset, so the crawler does not need to be run again.
