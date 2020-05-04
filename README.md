@@ -1,5 +1,4 @@
 # TextMessageSearchIR
-CS6200 - Information Retrieval Final Project
 
 Refer to the Documentation to understand the project and the concepts used.
 
